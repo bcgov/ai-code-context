@@ -75,6 +75,12 @@ const alwaysExcludeFiles = new Set([
     'poetry.lock'
 ]);
 
+// Also exclude common repo metadata and generated/runtime files
+alwaysExcludeFiles.add('package.json');
+alwaysExcludeFiles.add('requirements.txt');
+alwaysExcludeFiles.add('knowledge_weaver_snapshot.txt');
+alwaysExcludeFiles.add('repo_snapshot_llm_distilled.txt');
+
 // Consolidated file extensions from both versions
 const allowedExtensions = ['.md', '.js', '.ts', '.tsx', '.py', '.sh', '.sql', '.cjs', '.mjs', '.json', '.toml', '.yml', '.yaml', '.txt', '.ipynb'];
 

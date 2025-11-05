@@ -1,0 +1,20 @@
+{
+  "name": "ai-code-context",
+  "version": "0.1.0",
+  "description": "Tools to generate LLM-optimized repository snapshots (JavaScript & Python)",
+  "main": "capture_repo_snapshot.mjs",
+  "type": "module",
+  "scripts": {
+    "snapshot": "node capture_repo_snapshot.mjs",
+    "test": "echo \"No tests configured\" && exit 0",
+    "lint": "echo \"No linter configured\" && exit 0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "optionalDependencies": {
+    "gpt-tokenizer": "^1.0.0"
+  },
+  "keywords": ["llm", "snapshot", "context-engineering", "ai", "repository"],
+  "license": "MIT"
+}

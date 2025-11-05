@@ -37,6 +37,14 @@ ALWAYS_EXCLUDE_FILES = {
     '.gitignore', '.DS_Store', '.env', 'poetry.lock', 'package-lock.json'
 }
 
+# Also exclude common repo metadata and generated snapshot outputs
+ALWAYS_EXCLUDE_FILES.update({
+    'package.json',
+    'requirements.txt',
+    'repo_snapshot_llm_distilled.txt',
+    'knowledge_weaver_snapshot.txt'
+})
+
 # --- END CONFIGURATION ---
 FILE_SEPARATOR_START = '--- START OF FILE'
 FILE_SEPARATOR_END = '--- END OF FILE'

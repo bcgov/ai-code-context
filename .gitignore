@@ -1,0 +1,44 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Node
+node_modules/
+
+# IDEs and editors
+.vscode/
+.idea/
+.DS_Store
+
+# Environment files
+.env
+.env.*
+
+# Snapshot outputs (LLM-optimized repository snapshots)
+repo_snapshot_llm_distilled.txt
+knowledge_weaver_snapshot.txt
+sample_project/repo_snapshot_llm_distilled.txt
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Logs
+.log
+logs/
+
+# Lockfiles
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+poetry.lock

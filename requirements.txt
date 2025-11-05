@@ -1,0 +1,3 @@
+# Python runtime dependencies for create_llm_snapshot.py
+# Pin or adjust versions as needed for your environment.
+tiktoken>=0.4.0
