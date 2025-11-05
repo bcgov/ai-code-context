@@ -1,0 +1,149 @@
+# Sample YAML Configuration
+# This demonstrates YAML format support in snapshots
+
+# Application settings
+app:
+  name: "Sample Project"
+  version: "1.0.0"
+  environment: "development"
+  debug: true
+  port: 3000
+  host: "0.0.0.0"
+
+# Database configuration
+database:
+  type: "postgresql"
+  host: "localhost"
+  port: 5432
+  name: "sample_db"
+  username: "sample_user"
+  password: "sample_password"
+  ssl: false
+  connection_pool:
+    min: 2
+    max: 20
+    idle_timeout: 30000
+    acquire_timeout: 60000
+
+# Authentication settings
+auth:
+  jwt:
+    secret: "your-super-secret-jwt-key-change-in-production"
+    algorithm: "HS256"
+    expires_in: "24h"
+    refresh_expires_in: "7d"
+  bcrypt:
+    rounds: 12
+  oauth:
+    google:
+      client_id: "your-google-client-id"
+      client_secret: "your-google-client-secret"
+    github:
+      client_id: "your-github-client-id"
+      client_secret: "your-github-client-secret"
+
+# API configuration
+api:
+  prefix: "/api/v1"
+  rate_limiting:
+    enabled: true
+    window_ms: 900000
+    max_requests: 100
+  cors:
+    enabled: true
+    origins:
+      - "http://localhost:3000"
+      - "http://localhost:3001"
+      - "https://app.example.com"
+    credentials: true
+    methods:
+      - "GET"
+      - "POST"
+      - "PUT"
+      - "DELETE"
+      - "OPTIONS"
+    headers:
+      - "Content-Type"
+      - "Authorization"
+      - "X-Requested-With"
+
+# Logging configuration
+logging:
+  level: "info"
+  format: "json"
+  outputs:
+    - type: "console"
+      colorize: true
+    - type: "file"
+      path: "./logs/app.log"
+      max_size: "10m"
+      max_files: "5"
+  categories:
+    http:
+      level: "info"
+    database:
+      level: "warn"
+    auth:
+      level: "debug"
+
+# Email configuration
+email:
+  provider: "sendgrid"
+  api_key: "your-sendgrid-api-key"
+  from:
+    name: "Sample Project"
+    email: "noreply@example.com"
+  templates:
+    welcome: "templates/welcome.html"
+    password_reset: "templates/password-reset.html"
+    email_verification: "templates/email-verification.html"
+
+# File upload settings
+uploads:
+  max_file_size: "10MB"
+  allowed_types:
+    - "image/jpeg"
+    - "image/png"
+    - "image/gif"
+    - "application/pdf"
+  destination: "./uploads"
+  temp_dir: "./tmp/uploads"
+
+# Feature flags
+features:
+  user_registration: true
+  email_verification: true
+  password_reset: true
+  two_factor_auth: false
+  analytics: true
+  notifications: true
+  api_documentation: true
+
+# External service integrations
+integrations:
+  analytics:
+    google_analytics_id: "GA-XXXXXXXXX"
+    mixpanel_token: "your-mixpanel-token"
+  monitoring:
+    sentry_dsn: "your-sentry-dsn"
+    datadog_api_key: "your-datadog-api-key"
+  storage:
+    aws_s3:
+      bucket: "sample-project-uploads"
+      region: "us-east-1"
+      access_key_id: "your-aws-access-key"
+      secret_access_key: "your-aws-secret-key"
+
+# Development settings
+development:
+  hot_reload: true
+  source_maps: true
+  error_details: true
+  cors_any_origin: true
+
+# Production settings
+production:
+  optimize_assets: true
+  gzip_compression: true
+  security_headers: true
+  rate_limiting_strict: true

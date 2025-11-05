@@ -1,0 +1,50 @@
+{
+  "app": {
+    "name": "Sample Project",
+    "version": "1.0.0",
+    "environment": "development",
+    "port": 3000,
+    "host": "localhost"
+  },
+  "database": {
+    "type": "postgresql",
+    "host": "localhost",
+    "port": 5432,
+    "database": "sample_db",
+    "username": "sample_user",
+    "password": "sample_password",
+    "pool": {
+      "min": 2,
+      "max": 10,
+      "idle": 10000
+    }
+  },
+  "auth": {
+    "jwtSecret": "your-super-secret-jwt-key-change-in-production",
+    "bcryptRounds": 12,
+    "sessionTimeout": 3600,
+    "refreshTokenExpiry": 604800
+  },
+  "api": {
+    "rateLimit": {
+      "windowMs": 900000,
+      "max": 100
+    },
+    "cors": {
+      "origin": ["http://localhost:3000", "http://localhost:3001"],
+      "credentials": true
+    }
+  },
+  "logging": {
+    "level": "info",
+    "file": "logs/app.log",
+    "maxSize": "10m",
+    "maxFiles": "5"
+  },
+  "features": {
+    "userRegistration": true,
+    "emailVerification": true,
+    "passwordReset": true,
+    "twoFactorAuth": false
+  }
+}

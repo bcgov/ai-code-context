@@ -1,0 +1,9 @@
+# Repository Snapshot (LLM-Optimized)
+
+Generated On: 2025-11-05T21:17:28.918Z
+
+# Mnemonic Weight (Token Count): ~40 tokens
+
+# Directory Structure (relative to project root)
+
+
