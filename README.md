@@ -4,7 +4,10 @@ Generate LLM-optimized snapshots of your code repositories for efficient sharing
 
 ## 🎯 Purpose & Context Engineering
 
-These scripts implement an approach to sharing code context with LLMs. This is a type of **practical context engineering** for AI-assisted software development, directly addressing the research question from ["Context Engineering 2.0"](https://arxiv.org/abs/2510.26493): *"How can machines better understand our situations and purposes?"*  
+These scripts implement an approach to sharing code context with LLMs. This is a type of **practical context engineering** for AI-assisted software development, directly addressing the research question from ["Context Engineering 2.0"](https://arxiv.org/abs/2510.26493): *"How can machines better understand our situations and purposes?"* 
+
+Overview video:  https://bcgov.sharepoint.com/:v:/r/teams/00003/Shared%20Documents/%F0%9F%8C%9F%20Artificial%20Intelligence/Explainer__Context_Engineering.mp4?csf=1&web=1&e=uXLnK4
+
 
 ### Why Context Engineering Matters
 
